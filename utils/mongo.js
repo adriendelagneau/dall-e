@@ -6,6 +6,7 @@ function dbConnect() {
     console.log('Already connected.')
     return;
   }
+  mongoose.set("strictQuery", false);
   mongoose.connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true
