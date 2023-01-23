@@ -102,7 +102,7 @@ export const getServerSideProps = async () => {
 
 
 
-  const res = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/post`)
+  const res = await axios.get('https://dall-e-orpin.vercel.app/api/post')
 
 
  
