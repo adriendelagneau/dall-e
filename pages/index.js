@@ -102,7 +102,7 @@ export const getServerSideProps = async () => {
 
 
 
-  const res = await axios.get('http://localhost:3000/api/post')
+  const res = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/post`)
 
 
  

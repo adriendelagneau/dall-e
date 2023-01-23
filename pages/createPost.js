@@ -19,7 +19,7 @@ function CreatePost() {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await axios.post('http://localhost:3000/api/dalle', {prompt: form.prompt})
+        const response = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/dalle`, {prompt: form.prompt})
         const data = await response.data;
         setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}`});
       } catch (err) {
@@ -39,7 +39,7 @@ const handleSubmit = async (e) => {
     setLoading(true);
     try {
       
-      const response = await axios.post('http://localhost:3000/api/post', { form })
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/post`, { form })
       
       alert('Success');
       Router.push('/');
