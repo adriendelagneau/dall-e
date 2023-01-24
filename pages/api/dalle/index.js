@@ -26,10 +26,10 @@ export default async function handler(req, res) {
           prompt,
           n: 1,
           size: '512x512',
-          response_format: 'b64_json',///////////////////////////////////////////////////////////////
+          response_format: 'url',///////////////////////////////////////////////////////////////
         });
     //console.log(aiResponse.data.data[0].b64_json)
-        const image = aiResponse.data.data[0].b64_json;
+        const image = aiResponse.data.data[0].url;
         res.status(200).json({ photo: image });
       } catch (error) {
         console.error(error);
