@@ -43,7 +43,7 @@ export default function Home(props) {
   return (
     <>
       
-      <section className='max-w-7xl mx-auto p-5'>
+      <section className='p-5 mx-auto max-w-7xl'>
 
 <div>
     <h1 className='font-extrabold text-[#222328] text-[32px]'>The Community Showcase</h1>
@@ -65,7 +65,7 @@ export default function Home(props) {
 
 <div className="mt-10">
     {loading ? (
-    <div className="flex justify-center items-center">
+    <div className="flex items-center justify-center">
         <Loader />
     </div>
     ) : (
@@ -75,7 +75,7 @@ export default function Home(props) {
             Showing Resuls for <span className="text-[#222328]">{searchText}</span>:
         </h2>
         )}
-        <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3">
+        <div className="grid grid-cols-1 gap-3 lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2">
         {searchText ? (
             <RenderCards
             data={searchedResults}
