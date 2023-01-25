@@ -42,7 +42,7 @@ const handleSubmit = async (e) => {
     setLoading(true);
     try {
       
-      const response = await axios.post('http://localhost:3000/api/post', { form })
+      const response = await axios.post('https://dall-e-orpin.vercel.app/api/post', { form })
       
       alert('Success');
       Router.push('/');
