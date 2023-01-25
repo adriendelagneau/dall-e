@@ -20,7 +20,7 @@ function CreatePost() {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await axios.post('http://localhost:3000/api/dalle', {prompt: form.prompt})
+        const response = await axios.post('https://dall-e-orpin.vercel.app/api/dalle', {prompt: form.prompt})
 
         const data = await response.data;
    
